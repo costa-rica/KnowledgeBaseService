@@ -57,11 +57,11 @@
 
 ## Phase 6: Main entrypoint and orchestration
 
-- [ ] Create `src/main.py` — orchestrates Job 1 (sync) then Job 2 (scan + embed)
-- [ ] Initialize logger before any work
-- [ ] Handle early exit logging (flush logs before exit)
-- [ ] Exit with non-zero code on any failure
-- [ ] Create top-level `main.py` that imports and runs `src/main.py`
+- [x] Create `src/main.py` — orchestrates Job 1 (sync) then Job 2 (scan + embed)
+- [x] Initialize logger before any work
+- [x] Handle early exit logging (flush logs before exit)
+- [x] Exit with non-zero code on any failure
+- [x] Create top-level `main.py` that imports and runs `src/main.py`
 
 > **Checkpoint:** Run tests. If tests pass, check off completed tasks and commit referencing this file and Phase 6.
 
