@@ -323,7 +323,7 @@ loguru
 ### Target OS
 
 - **OS:** Ubuntu 20.04 or 24.04 LTS Server
-- **Python:** System Python 3 or a managed install — version should be pinned per project
+- **Python:** 3.12 or higher — 3.13 for local dev (Homebrew), 3.12+ on the server
 - **Server:** FSDC avatar08
 
 ### User model
