@@ -4,12 +4,11 @@
 
 ## Phase 1: Project scaffolding
 
-- [ ] Create `worker-python/` directory with `src/` and `tests/` subdirectories
-- [ ] Create `pyproject.toml` with dependencies: `sentence-transformers`, `sqlalchemy`, `psycopg2-binary`, `pgvector`, `loguru`
-- [ ] Create `requirements.txt` or lock file
-- [ ] Add dev dependencies: `pytest`, `pytest-cov`
-- [ ] Add `db-models` as editable dependency (`pip install -e ../db-models`)
-- [ ] Create `Makefile` with `test` target: `python -m pytest --cov=src --cov-report=term-missing`
+- [x] Create `worker-python/` directory with `src/` and `tests/` subdirectories
+- [x] Create `pyproject.toml` with dependencies: `sentence-transformers`, `sqlalchemy`, `psycopg2-binary`, `pgvector`, `loguru`
+- [x] Add dev dependencies: `pytest`, `pytest-cov` (via optional-dependencies)
+- [x] Add `db-models` as editable dependency (`pip install -e ../db-models`)
+- [x] Create `Makefile` with `test` target: `python -m pytest --cov=src --cov-report=term-missing`
 
 > **Checkpoint:** Run `make test` (should pass with no tests collected). Commit referencing this file and Phase 1.
 

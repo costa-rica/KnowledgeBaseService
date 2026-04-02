@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "worker-python"
+version = "0.1.0"
+description = "Sync and embedding worker for knowledge-base-service"
+requires-python = ">=3.12"
+dependencies = [
+    "sentence-transformers",
+    "sqlalchemy>=2.0",
+    "psycopg2-binary>=2.9",
+    "pgvector>=0.3",
+    "loguru",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "unit: unit tests",
+    "integration: integration tests requiring external services",
+    "contract: contract tests for interface boundaries",
+]
