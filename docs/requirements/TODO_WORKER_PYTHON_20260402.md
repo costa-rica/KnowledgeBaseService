@@ -35,12 +35,12 @@
 
 ## Phase 4: File diffing (Job 2 — scan and compare)
 
-- [ ] Create `src/scanner.py` — recursively walk vault with `pathlib.Path.rglob("*.md")`
-- [ ] For each file, read filesystem `mtime`
-- [ ] Compare `mtime` against `markdown_files.updated_at` in the database
-- [ ] Classify each file as new, modified, or unchanged
-- [ ] Insert new files into `markdown_files`; update modified files; skip unchanged
-- [ ] Log counts: new, modified, unchanged, errors
+- [x] Create `src/scanner.py` — recursively walk vault with `pathlib.Path.rglob("*.md")`
+- [x] For each file, read filesystem `mtime`
+- [x] Compare `mtime` against `markdown_files.updated_at` in the database
+- [x] Classify each file as new, modified, or unchanged
+- [x] Insert new files into `markdown_files`; update modified files; skip unchanged
+- [x] Log counts: new, modified, unchanged, errors
 
 > **Checkpoint:** Run tests. If tests pass, check off completed tasks and commit referencing this file and Phase 4.
 
