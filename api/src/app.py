@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 
 from src.logger import setup_logger
+from src.routes.obsidian import router as obsidian_router
 
 
 @asynccontextmanager
@@ -13,6 +14,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(title="Knowledge Base Service", lifespan=lifespan)
+app.include_router(obsidian_router)
 
 
 @app.get("/", response_class=HTMLResponse)
