@@ -14,13 +14,13 @@
 
 ## Phase 2: Logging setup
 
-- [ ] Create `src/logger.py` — centralized Loguru configuration per `LOGGING_PYTHON_V06.md`
-- [ ] Validate required env vars at startup (`NAME_APP`, `RUN_ENVIRONMENT`, `PATH_TO_LOGS`)
-- [ ] Fatal exit with explicit error if required vars are missing
-- [ ] Configure sinks per `RUN_ENVIRONMENT` (development / testing / production)
-- [ ] Enable rotation, retention, and `enqueue=True` for testing and production
-- [ ] Install `sys.excepthook` for uncaught exception logging
-- [ ] Create `.env.example` with all required environment variables
+- [x] Create `src/logger.py` — centralized Loguru configuration per `LOGGING_PYTHON_V06.md`
+- [x] Validate required env vars at startup (`NAME_APP`, `RUN_ENVIRONMENT`, `PATH_TO_LOGS`)
+- [x] Fatal exit with explicit error if required vars are missing
+- [x] Configure sinks per `RUN_ENVIRONMENT` (development / testing / production)
+- [x] Enable rotation, retention, and `enqueue=True` for testing and production
+- [x] Install `sys.excepthook` for uncaught exception logging
+- [x] Create `.env.example` with all required environment variables
 
 > **Checkpoint:** Run tests. If tests pass, check off completed tasks and commit referencing this file and Phase 2.
 
