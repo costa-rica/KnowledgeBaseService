@@ -26,10 +26,10 @@
 
 ## Phase 3: Vault sync (Job 1)
 
-- [ ] Create `src/sync.py` — function to invoke Obsidian headless CLI for one-way pull
-- [ ] Read vault path from environment or config
-- [ ] Log sync start, completion, and any errors
-- [ ] Handle sync failure gracefully (log and exit with non-zero code)
+- [x] Create `src/sync.py` — function to invoke Obsidian headless CLI for one-way pull
+- [x] Read vault path from environment or config
+- [x] Log sync start, completion, and any errors
+- [x] Handle sync failure gracefully (log and exit with non-zero code)
 
 > **Checkpoint:** Run tests. If tests pass, check off completed tasks and commit referencing this file and Phase 3.
 
