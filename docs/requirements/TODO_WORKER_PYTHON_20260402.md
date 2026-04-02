@@ -46,12 +46,12 @@
 
 ## Phase 5: Embedding generation (Job 2 — embed and upsert)
 
-- [ ] Create `src/embedder.py` — load `sentence-transformers/all-MiniLM-L6-v2` model
-- [ ] Generate embedding from full file content (no chunking in v1)
-- [ ] Extract snippet (first N characters) for storage
-- [ ] Insert into `markdown_file_embeddings` for new files
-- [ ] Upsert into `markdown_file_embeddings` for modified files
-- [ ] Log embedding generation counts and any failures
+- [x] Create `src/embedder.py` — load `sentence-transformers/all-MiniLM-L6-v2` model
+- [x] Generate embedding from full file content (no chunking in v1)
+- [x] Extract snippet (first N characters) for storage
+- [x] Insert into `markdown_file_embeddings` for new files
+- [x] Upsert into `markdown_file_embeddings` for modified files
+- [x] Log embedding generation counts and any failures
 
 > **Checkpoint:** Run tests. If tests pass, check off completed tasks and commit referencing this file and Phase 5.
 
