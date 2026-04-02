@@ -24,9 +24,9 @@
 
 ## Phase 4: Alembic migration setup
 
-- [ ] Add `alembic` to dependencies
-- [ ] Run `alembic init` and configure `alembic.ini` and `env.py`
-- [ ] Generate initial migration from models
-- [ ] Verify migration applies cleanly against a local PostgreSQL + pgvector instance
+- [x] Add `alembic` to dependencies
+- [x] Run `alembic init` and configure `alembic.ini` and `env.py`
+- [x] Generate initial migration from models
+- [ ] Verify migration applies cleanly against a local PostgreSQL + pgvector instance (deferred — no PostgreSQL on dev machine)
 
 > **Checkpoint:** After each phase, verify the package imports correctly and the editable install still works. Commit referencing this file and the completed phase.
