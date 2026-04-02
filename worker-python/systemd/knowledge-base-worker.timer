@@ -1,0 +1,19 @@
+# Knowledge Base Worker — systemd timer
+#
+# Install:
+#   sudo cp knowledge-base-worker.timer /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now knowledge-base-worker.timer
+#
+# Check status:
+#   systemctl list-timers --all | grep knowledge-base
+
+[Unit]
+Description=Daily trigger for Knowledge Base Service Worker
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,28 @@
+# Knowledge Base Worker — systemd service
+#
+# Install:
+#   sudo cp knowledge-base-worker.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable knowledge-base-worker.timer
+#
+# Manual run:
+#   sudo systemctl start knowledge-base-worker.service
+#
+# Logs:
+#   journalctl -u knowledge-base-worker.service
+
+[Unit]
+Description=Knowledge Base Service Worker
+After=network.target postgresql.service
+
+[Service]
+Type=oneshot
+User=limited_user
+WorkingDirectory=/home/limited_user/applications/knowledge-base-service/worker-python
+ExecStart=/home/limited_user/environments/knowledge-base-service/bin/python main.py
+EnvironmentFile=/home/limited_user/applications/knowledge-base-service/worker-python/.env
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

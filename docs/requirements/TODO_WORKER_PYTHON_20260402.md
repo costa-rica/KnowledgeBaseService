@@ -67,9 +67,9 @@
 
 ## Phase 7: Systemd service and timer files
 
-- [ ] Create `systemd/knowledge-base-worker.service` (reference file, not installed)
-- [ ] Create `systemd/knowledge-base-worker.timer` (reference file, not installed)
-- [ ] Verify paths match `limited_user` directory layout
-- [ ] Document install steps in a README or inline comments
+- [x] Create `systemd/knowledge-base-worker.service` (reference file, not installed)
+- [x] Create `systemd/knowledge-base-worker.timer` (reference file, not installed)
+- [x] Verify paths match `limited_user` directory layout
+- [x] Document install steps in inline comments
 
 > **Checkpoint:** Commit referencing this file and Phase 7.
