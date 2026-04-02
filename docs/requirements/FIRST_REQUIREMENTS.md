@@ -14,11 +14,16 @@
 ```
 knowledge-base-service/
 ├── api/                  # FastAPI web service
+│   ├── src/              # Application source code
+│   └── tests/            # pytest test suite
 ├── worker-python/        # Systemd-managed sync and embedding worker
+│   ├── src/              # Application source code
+│   └── tests/            # pytest test suite
 └── db-models/            # Shared SQLAlchemy package (local pip install)
+    └── src/              # Package source code
 ```
 
-All three are Python projects. `db-models` is installed as a local editable package into both `api` and `worker-python`.
+All three are Python projects. Each project keeps its application code in a `src/` directory. `db-models` is installed as a local editable package into both `api` and `worker-python`.
 
 ---
 

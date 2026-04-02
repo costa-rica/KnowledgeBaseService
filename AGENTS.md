@@ -19,6 +19,8 @@
   - adds a new route, component, workflow, or integration point
 - For broader commits, the title can stay concise, but the body should summarize the main change areas so a reader can understand scope without opening the diff.
 - Do not use the body as a file inventory. Summarize the logical changes in 2-5 bullets.
+- Never end a commit with `Co-Authored-By:` or `<noreply@anthropic.com>`.
+  - it is ok to include a shorter message like "commit by Claude Sonnet 4.5"
 
 ### Format
 
