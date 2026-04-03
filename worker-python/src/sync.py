@@ -1,4 +1,4 @@
-"""Obsidian vault sync — one-way pull from Obsidian cloud."""
+"""Obsidian vault sync — one-way pull from Obsidian cloud via Obsidian Headless."""
 
 import os
 import subprocess
@@ -10,8 +10,9 @@ def sync_vault() -> None:
     """Pull the latest vault state from Obsidian cloud.
 
     Reads VAULT_PATH from the environment to determine the target directory.
-    Executes the Obsidian headless CLI to perform a one-way pull.
-    The local vault is treated as a read-only replica.
+    Uses the ``ob`` CLI (obsidian-headless) in mirror-remote mode so the local
+    vault is a read-only replica — any local changes are reverted to match the
+    remote state.
 
     Raises:
         SystemExit: If VAULT_PATH is missing or the sync command fails.
@@ -29,7 +30,7 @@ def sync_vault() -> None:
 
     try:
         result = subprocess.run(
-            ["obsidianctl", "sync", "--vault", vault_path, "--pull-only"],
+            ["ob", "sync", "--path", vault_path],
             capture_output=True,
             text=True,
             timeout=300,
@@ -49,8 +50,8 @@ def sync_vault() -> None:
 
     except FileNotFoundError:
         logger.critical(
-            "obsidianctl command not found. "
-            "Ensure Obsidian CLI is installed and on PATH."
+            "ob command not found. "
+            "Install obsidian-headless: npm install -g obsidian-headless"
         )
         raise SystemExit(1)
 

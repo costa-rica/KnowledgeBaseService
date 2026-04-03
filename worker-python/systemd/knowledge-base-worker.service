@@ -18,9 +18,9 @@ After=network.target postgresql.service
 [Service]
 Type=oneshot
 User=limited_user
-WorkingDirectory=/home/limited_user/applications/knowledge-base-service/worker-python
+WorkingDirectory=/home/limited_user/applications/KnowledgeBaseService/worker-python
 ExecStart=/home/limited_user/environments/knowledge-base-service/bin/python main.py
-EnvironmentFile=/home/limited_user/applications/knowledge-base-service/worker-python/.env
+EnvironmentFile=/home/limited_user/applications/KnowledgeBaseService/worker-python/.env
 StandardOutput=journal
 StandardError=journal
 

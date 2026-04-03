@@ -5,9 +5,9 @@ After=network.target postgresql.service
 [Service]
 Type=simple
 User=limited_user
-WorkingDirectory=/home/limited_user/applications/knowledge-base-service/api
-ExecStart=/home/limited_user/environments/knowledge-base-service/bin/uvicorn src.app:app --host 127.0.0.1 --port 8000
-EnvironmentFile=/home/limited_user/applications/knowledge-base-service/api/.env
+WorkingDirectory=/home/limited_user/applications/KnowledgeBaseService/api
+ExecStart=/home/limited_user/environments/knowledge-base-service/bin/uvicorn src.app:app --host 127.0.0.1 --port 8007
+EnvironmentFile=/home/limited_user/applications/KnowledgeBaseService/api/.env
 Restart=on-failure
 RestartSec=5
 StandardOutput=journal
