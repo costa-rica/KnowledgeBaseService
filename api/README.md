@@ -45,12 +45,12 @@ api/
 
 ## .env
 
-| Variable          | Required | Description                                |
-| ----------------- | -------- | ------------------------------------------ |
-| `NAME_APP`        | Yes      | Application name for logging               |
-| `RUN_ENVIRONMENT` | Yes      | `development`, `testing`, or `production`  |
-| `PATH_TO_LOGS`    | Prod/Test| Directory for log files                    |
-| `DATABASE_URL`    | Yes      | PostgreSQL connection string               |
+| Variable          | Required  | Description                               |
+| ----------------- | --------- | ----------------------------------------- |
+| `NAME_APP`        | Yes       | Application name for logging              |
+| `RUN_ENVIRONMENT` | Yes       | `development`, `testing`, or `production` |
+| `PATH_TO_LOGS`    | Prod/Test | Directory for log files                   |
+| `DATABASE_URL`    | Yes       | PostgreSQL connection string              |
 
 ## Nginx Reverse Proxy
 
@@ -74,6 +74,8 @@ server {
 ```bash
 source .venv/bin/activate
 DATABASE_URL=postgresql://... python -m scripts.generate_token --name "my-client"
+# or in production it should be:
+sudo -u limited_user DATABASE_URL=postgresql:///knowledge_base /home/limited_user/environments/knowledge-base-service/bin/python -m scripts.generate_token --name "my-client"
 ```
 
 The raw token is printed to stdout. Store it securely — it cannot be retrieved again.
