@@ -67,8 +67,8 @@
 
 ## Phase 7: Systemd service and timer files
 
-- [x] Create `systemd/knowledge-base-worker.service` (reference file, not installed)
-- [x] Create `systemd/knowledge-base-worker.timer` (reference file, not installed)
+- [x] Create `systemd/knowledgebaseservice-worker-python.service` (reference file, not installed)
+- [x] Create `systemd/knowledgebaseservice-worker-python.timer` (reference file, not installed)
 - [x] Verify paths match `limited_user` directory layout
 - [x] Document install steps in inline comments
 

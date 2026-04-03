@@ -31,7 +31,7 @@ api/
 ├── tests/
 │   └── unit/                   # All unit tests, mocked DB and model
 ├── systemd/
-│   └── knowledge-base-api.service
+│   └── knowledgebaseservice-api.service
 ├── pyproject.toml
 ├── Makefile
 └── .env.example
@@ -46,7 +46,7 @@ source .venv/bin/activate
 pip install -e ".[dev]" -e ../db-models
 
 # dev server
-NAME_APP=knowledge-base-api RUN_ENVIRONMENT=development DATABASE_URL=postgresql://... python main.py
+NAME_APP=KnowledgeBaseServiceAPI RUN_ENVIRONMENT=development DATABASE_URL=postgresql://... python main.py
 
 # tests
 make test

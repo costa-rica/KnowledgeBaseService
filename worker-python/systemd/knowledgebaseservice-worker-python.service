@@ -1,15 +1,15 @@
 # Knowledge Base Worker — systemd service
 #
 # Install:
-#   sudo cp knowledge-base-worker.service /etc/systemd/system/
+#   sudo cp knowledgebaseservice-worker-python.service /etc/systemd/system/
 #   sudo systemctl daemon-reload
-#   sudo systemctl enable knowledge-base-worker.timer
+#   sudo systemctl enable knowledgebaseservice-worker-python.timer
 #
 # Manual run:
-#   sudo systemctl start knowledge-base-worker.service
+#   sudo systemctl start knowledgebaseservice-worker-python.service
 #
 # Logs:
-#   journalctl -u knowledge-base-worker.service
+#   journalctl -u knowledgebaseservice-worker-python.service
 
 [Unit]
 Description=Knowledge Base Service Worker

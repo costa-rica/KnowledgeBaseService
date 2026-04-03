@@ -31,8 +31,8 @@ worker-python/
 │   ├── unit/                   # all unit tests, mocked DB and model
 │   └── integration/            # (placeholder for future integration tests)
 ├── systemd/
-│   ├── knowledge-base-worker.service
-│   └── knowledge-base-worker.timer
+│   ├── knowledgebaseservice-worker-python.service
+│   └── knowledgebaseservice-worker-python.timer
 ├── pyproject.toml
 ├── Makefile
 └── .env.example
@@ -47,7 +47,7 @@ source .venv/bin/activate
 pip install -e ".[dev]" -e ../db-models
 
 # manual run
-NAME_APP=knowledge-base-worker RUN_ENVIRONMENT=development \
+NAME_APP=KnowledgeBaseServiceWorkerPython RUN_ENVIRONMENT=development \
   VAULT_PATH=/path/to/vault DATABASE_URL=postgresql://... \
   python main.py
 

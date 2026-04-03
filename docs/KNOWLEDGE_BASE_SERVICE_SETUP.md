@@ -108,7 +108,7 @@ nano /home/limited_user/applications/KnowledgeBaseService/worker-python/.env
 Contents:
 
 ```
-NAME_APP=knowledge-base-worker
+NAME_APP=KnowledgeBaseServiceWorkerPython
 RUN_ENVIRONMENT=production
 PATH_TO_LOGS=/home/limited_user/logs
 DATABASE_URL=postgresql:///knowledge_base
@@ -124,16 +124,16 @@ sudo -u limited_user /home/limited_user/environments/knowledge-base-service/bin/
 ### 5. Install the systemd service and timer
 
 ```bash
-sudo cp /home/limited_user/applications/KnowledgeBaseService/worker-python/systemd/knowledge-base-worker.service /etc/systemd/system/
-sudo cp /home/limited_user/applications/KnowledgeBaseService/worker-python/systemd/knowledge-base-worker.timer /etc/systemd/system/
+sudo cp /home/limited_user/applications/KnowledgeBaseService/worker-python/systemd/knowledgebaseservice-worker-python.service /etc/systemd/system/
+sudo cp /home/limited_user/applications/KnowledgeBaseService/worker-python/systemd/knowledgebaseservice-worker-python.timer /etc/systemd/system/
 sudo systemctl daemon-reload
-sudo systemctl enable --now knowledge-base-worker.timer
+sudo systemctl enable --now knowledgebaseservice-worker-python.timer
 ```
 
 ### 6. Verify the timer is scheduled
 
 ```bash
-systemctl list-timers | grep knowledge-base
+systemctl list-timers | grep knowledgebaseservice
 ```
 
 ## api
@@ -153,7 +153,7 @@ nano /home/limited_user/applications/KnowledgeBaseService/api/.env
 Contents:
 
 ```
-NAME_APP=knowledge-base-api
+NAME_APP=KnowledgeBaseServiceAPI
 RUN_ENVIRONMENT=production
 PATH_TO_LOGS=/home/limited_user/logs
 DATABASE_URL=postgresql:///knowledge_base
@@ -162,16 +162,16 @@ DATABASE_URL=postgresql:///knowledge_base
 ### 3. Install the systemd service
 
 ```bash
-sudo cp /home/limited_user/applications/KnowledgeBaseService/api/systemd/knowledge-base-api.service /etc/systemd/system/
+sudo cp /home/limited_user/applications/KnowledgeBaseService/api/systemd/knowledgebaseservice-api.service /etc/systemd/system/
 sudo systemctl daemon-reload
-sudo systemctl enable knowledge-base-api
-sudo systemctl start knowledge-base-api
+sudo systemctl enable knowledgebaseservice-api
+sudo systemctl start knowledgebaseservice-api
 ```
 
 ### 4. Verify it's running
 
 ```bash
-sudo systemctl status knowledge-base-api
+sudo systemctl status knowledgebaseservice-api
 curl http://127.0.0.1:8007/
 ```
 
