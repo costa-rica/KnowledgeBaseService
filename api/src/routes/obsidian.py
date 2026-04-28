@@ -53,11 +53,11 @@ def find_matches(
                 e.id,
                 f.file_name,
                 f.file_path,
-                1 - (e.embedding <=> :embedding::vector) AS score,
+                1 - (e.embedding <=> CAST(:embedding AS vector)) AS score,
                 e.snippet
             FROM markdown_file_embeddings e
             JOIN markdown_files f ON f.id = e.markdown_file_id
-            ORDER BY e.embedding <=> :embedding::vector
+            ORDER BY e.embedding <=> CAST(:embedding AS vector)
             LIMIT 5
         """),
         {"embedding": str(embedding)},
