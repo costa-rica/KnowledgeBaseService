@@ -9,10 +9,11 @@
 #   systemctl list-timers --all | grep knowledgebaseservice
 
 [Unit]
-Description=Daily trigger for Knowledge Base Service Worker
+Description=Daily 3am Pacific trigger for Knowledge Base Service Worker
+Requires=knowledgebaseservice-worker-python.service
 
 [Timer]
-OnCalendar=daily
+OnCalendar=*-*-* 03:00:00 America/Los_Angeles
 Persistent=true
 
 [Install]
